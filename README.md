@@ -9,6 +9,107 @@ Demo using Clerk + React / Vite
 
 * * *
 
+# React + Clerk Authentication App
+
+A React + Vite + TypeScript application with Clerk authentication integration.
+
+## 🚀 Quick Start (After Cloning)
+
+```bash
+# 1. Install dependencies and setup
+make setup
+
+# 2. Configure Clerk (see instructions below)
+# Edit .env.local with your Clerk publishable key
+
+# 3. Start development server
+make dev
+```
+
+## 📋 Available Make Commands
+
+```bash
+make help      # Show all available commands
+make install   # Install npm dependencies
+make setup     # Complete first-time setup
+make dev       # Start development server
+make build     # Build for production
+make preview   # Preview production build
+make lint      # Run ESLint
+make clean     # Clean and reinstall dependencies
+```
+
+## 🔑 Clerk Configuration
+
+1. **Get your Clerk publishable key:**
+   - Sign up at [clerk.com](https://clerk.com)
+   - Create a new application
+   - Go to **API Keys** and copy your **Publishable Key**
+
+2. **Configure environment variables:**
+   - Open `.env.local`
+   - Replace `YOUR_PUBLISHABLE_KEY` with your actual key:
+   ```bash
+   VITE_CLERK_PUBLISHABLE_KEY=pk_test_your-actual-key-here
+   ```
+
+3. **Restart the dev server:**
+   ```bash
+   make dev
+   ```
+
+## 🧩 What's Included
+
+- ✅ React 19 + Vite + TypeScript
+- ✅ Clerk authentication (`@clerk/clerk-react@latest`)
+- ✅ Pre-configured authentication components
+- ✅ Environment variable setup
+- ✅ Makefile for easy development
+
+## 🔐 Authentication Features
+
+- **Sign In/Sign Up**: Modal-based authentication
+- **User Management**: Built-in user profile management
+- **Protected Content**: Conditional rendering based on auth state
+- **Sign Out**: Automatic redirect after sign out
+
+## 📖 Documentation
+
+- See `CLERK_SETUP.md` for detailed setup instructions
+- [Clerk React Quickstart](https://clerk.com/docs/quickstarts/react)
+
+## 🛠️ Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linting
+npm run lint
+```
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── main.tsx          # App entry point with ClerkProvider
+│   ├── App.tsx           # Main component with auth UI
+│   └── ...
+├── .env.local           # Environment variables
+├── Makefile            # Development commands
+├── CLERK_SETUP.md      # Detailed setup guide
+└── README.md           # This file
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
